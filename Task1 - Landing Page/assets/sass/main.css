@@ -15,6 +15,12 @@
   }
 }
 /*
+media queries manager
+0 - 600px      = phones 
+1200px - 1800px = all the default styles
+750px +       = tablets
+*/
+/*
 ----------------------------------
     Setting initial styles
 ----------------------------------
@@ -30,6 +36,16 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+@media only screen and (max-width: 750px) {
+  html {
+    font-size: 45.5%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 45.5%;
+  }
 }
 
 body {
@@ -108,6 +124,11 @@ button {
 
 .paragraph {
   font-size: 1.8rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .paragraph {
+    font-size: 2rem;
+  }
 }
 
 .illustration {
@@ -281,6 +302,12 @@ button {
   border-radius: 1rem;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+@media only screen and (max-width: 37.5em) {
+  .card-horizontal {
+    width: 130%;
+    padding: 3.5rem 2.5rem;
+  }
+}
 .card-horizontal .number {
   font-weight: 800;
   color: #743fa6;
@@ -308,6 +335,11 @@ button {
   border-bottom: 10px ridge rgba(116, 63, 166, 0.4);
   width: 100%;
 }
+@media only screen and (max-width: 37.5em) {
+  .card-horizontal .heading span::after {
+    top: 1.3rem;
+  }
+}
 .card-horizontal:hover {
   background-color: #fff;
   box-shadow: 0 10px 30px rgba(40, 34, 75, 0.4);
@@ -317,10 +349,27 @@ button {
   color: #fff;
   background-color: #743fa6;
 }
+@media only screen and (max-width: 37.5em) {
+  .card-horizontal:first-child {
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(40, 34, 75, 0.4);
+    transform: scale(1.05);
+  }
+  .card-horizontal:first-child .number {
+    color: #fff;
+    background-color: #743fa6;
+  }
+}
 
 .header {
   padding: 2rem 7rem 4rem;
   background-image: linear-gradient(to right, #ebecf0 30%, #fff 30%);
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    padding: 3rem;
+    background-image: linear-gradient(to right, #ebecf0 55%, #fff 60%);
+  }
 }
 .header__sides {
   display: flex;
@@ -349,6 +398,15 @@ button {
   right: 2rem;
   top: 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .header__sides-left-input button {
+    width: 70%;
+    right: 2rem;
+    left: 2rem;
+    top: 8rem;
+    margin: 0 auto;
+  }
+}
 .header__sides-left-input input {
   border: none;
   outline: none;
@@ -356,6 +414,12 @@ button {
   color: inherit;
   padding: 3.3rem 0 3.3rem 7rem;
   width: 60%;
+}
+@media only screen and (max-width: 37.5em) {
+  .header__sides-left-input input {
+    width: 100%;
+    padding-bottom: 10rem;
+  }
 }
 .header__sides-left-link {
   text-decoration: underline;
@@ -373,6 +437,16 @@ button {
 .header__sides-right img {
   transform: scaleX(-1);
 }
+@media only screen and (max-width: 750px) {
+  .header__sides-right img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header__sides-right img {
+    display: none;
+  }
+}
 
 .navigation {
   display: flex;
@@ -380,9 +454,20 @@ button {
   align-items: center;
   margin-bottom: 8rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .navigation {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .navigation .logo {
   width: 22rem;
   height: auto;
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation .logo {
+    width: 17rem;
+  }
 }
 .navigation__list {
   list-style: none;
@@ -390,10 +475,20 @@ button {
   align-items: center;
   gap: 0.5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .navigation__list {
+    margin-top: 2rem;
+  }
+}
 .navigation__link {
   padding: 0.7rem 2.9rem;
   position: relative;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation__link {
+    padding: 0.5rem 1.3rem;
+  }
 }
 .navigation__link::after {
   content: "";
@@ -404,11 +499,26 @@ button {
   border-bottom: 2px solid #743fa6;
   transition: all 0.4s ease;
 }
+@media only screen and (max-width: 37.5em) {
+  .navigation__link::after {
+    left: 1rem;
+  }
+}
 .navigation__link:hover::after {
   width: 63.5%;
 }
+@media only screen and (max-width: 37.5em) {
+  .navigation__link:hover::after {
+    width: 62%;
+  }
+}
 .navigation__item:first-child a::after {
   width: 63.5%;
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation__item:first-child a::after {
+    width: 62%;
+  }
 }
 .navigation__item:last-child a {
   color: #743fa6;
@@ -431,12 +541,22 @@ button {
   align-items: center;
   margin-top: 10rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .section {
+    padding: 2rem;
+  }
+}
 .section-companies .Company-logo {
   width: 12%;
   -o-object-fit: contain;
      object-fit: contain;
   filter: grayscale(100%);
   transition: all 0.2s ease-in;
+}
+@media only screen and (max-width: 37.5em) {
+  .section-companies .Company-logo {
+    width: 25%;
+  }
 }
 .section-companies .Company-logo:hover {
   transform: scale(1.1);
@@ -450,6 +570,11 @@ button {
   padding: 2rem 0 4rem;
   border-bottom: 1px solid rgba(103, 109, 128, 0.4);
 }
+@media only screen and (max-width: 37.5em) {
+  .section-companies .companies__logos {
+    overflow-x: scroll;
+  }
+}
 .section-services {
   margin-top: 3rem;
   z-index: 2;
@@ -462,6 +587,11 @@ button {
   gap: 4rem;
   margin-top: 5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .section__cards {
+    flex-direction: column;
+  }
+}
 .section__sides {
   display: flex;
   gap: 3rem;
@@ -473,16 +603,38 @@ button {
   background-color: #ebecf0;
   border-radius: 30% 30% 0 0;
 }
+@media only screen and (max-width: 37.5em) {
+  .section-document {
+    margin-top: 2rem;
+    padding: 5rem 2rem;
+    border-radius: 0;
+  }
+}
 .section-document__rightside {
   width: 55%;
 }
 .section-document__rightside img {
   transform: scaleX(-1);
 }
+@media only screen and (max-width: 750px) {
+  .section-document__rightside img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section-document__rightside img {
+    display: none;
+  }
+}
 .section-knowledge .paragraph-main {
   width: 70%;
   text-align: center;
   margin: 2rem 0 6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .section-knowledge .paragraph-main {
+    width: 90%;
+  }
 }
 .section-knowledge .paragraph-card {
   font-size: 1.6rem;
@@ -493,12 +645,16 @@ button {
   gap: 4rem;
   margin-bottom: 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .section-knowledge .cards-small-area {
+    flex-wrap: wrap;
+  }
+}
 .section-knowledge .cards-small-area div p {
   width: 100%;
   text-align: left;
 }
 .section-privacy {
-  position: relative;
   margin: 2rem;
 }
 .section-privacy__buttons {
@@ -536,12 +692,6 @@ button {
 .section__cards .card-small-center {
   width: 100%;
 }
-.section__cards-privacy {
-  position: absolute;
-  top: 17rem;
-  right: 7rem;
-  left: 7rem;
-}
 .section__cards-security, .section__cards-privacy {
   transition: all 0.2s ease-in-out;
 }
@@ -549,10 +699,17 @@ button {
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  display: none;
 }
 .section-newsletter {
   background-color: #28224b;
   padding: 8rem 25rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .section-newsletter {
+    padding: 5rem 2rem;
+  }
 }
 .section-newsletter h2 {
   color: #fff;
@@ -566,6 +723,11 @@ button {
   position: relative;
   width: 100%;
 }
+@media only screen and (max-width: 37.5em) {
+  .section-newsletter .input-area {
+    flex-wrap: wrap;
+  }
+}
 .section-newsletter .input-area input {
   padding: 1.8rem 1.8rem 1.8rem 6rem;
   border-radius: 1rem;
@@ -575,6 +737,11 @@ button {
   font-size: 1.5rem;
   width: 50%;
   background-color: rgba(237, 238, 241, 0.2);
+}
+@media only screen and (max-width: 37.5em) {
+  .section-newsletter .input-area input {
+    width: 100%;
+  }
 }
 .section-newsletter .input-area input::-webkit-input-placeholder {
   color: #c5c5c5;
@@ -588,6 +755,17 @@ button {
   left: 12.5rem;
   fill: #fff;
 }
+@media only screen and (max-width: 37.5em) {
+  .section-newsletter .input-area svg {
+    left: 1.5rem;
+    top: 1rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section-newsletter .input-area button {
+    width: 100%;
+  }
+}
 .section-newsletter .input-area button:hover {
   background-color: #c5c5c5;
 }
@@ -600,6 +778,17 @@ button {
   gap: 2rem;
   position: relative;
 }
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    flex-wrap: wrap;
+    padding: 6rem 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .footer__logoside {
+    width: 100%;
+  }
+}
 .footer__logoside img {
   width: 20rem;
   height: auto;
@@ -610,6 +799,11 @@ button {
 .footer__logoside-socialicons {
   display: flex;
   gap: 4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer__logoside-socialicons {
+    margin-bottom: 2rem;
+  }
 }
 .footer__logoside-socialicons svg {
   width: 4rem;

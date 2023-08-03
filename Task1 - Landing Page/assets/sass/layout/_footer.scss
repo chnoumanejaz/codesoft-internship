@@ -5,7 +5,14 @@
   justify-content: space-evenly;
   gap: 2rem;
   position: relative;
+  @include respond(phone){
+    flex-wrap: wrap;
+    padding: 6rem 2rem;
+  }
   &__logoside {
+    @include respond(phone){
+ width: 100%;
+    }
     & img {
       width: 20rem;
       height: auto;
@@ -16,6 +23,9 @@
     &-socialicons {
       display: flex;
       gap: 4rem;
+      @include respond(phone){
+        margin-bottom: 2rem;
+      }
       & svg {
         width: 4rem;
         height: 4rem;

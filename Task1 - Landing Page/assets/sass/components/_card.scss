@@ -124,6 +124,10 @@
   gap: 1.5rem;
   border-radius: 1rem;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  @include respond(phone) {
+    width: 130%;
+    padding: 3.5rem 2.5rem;
+  }
   & .number {
     font-weight: 800;
     color: $secondary-color;
@@ -148,6 +152,9 @@
         left: 0;
         border-bottom: 10px ridge rgba($secondary-color, 0.4);
         width: 100%;
+        @include respond(phone){
+          top: 1.3rem;
+        }
       }
     }
   }
@@ -158,6 +165,17 @@
     & .number {
       color: $white-color;
       background-color: $secondary-color;
+    }
+  }
+  &:first-child {
+    @include respond(phone) {
+      background-color: $white-color;
+      box-shadow: 0 10px 30px rgba($primary-color, 0.4);
+      transform: scale(1.05);
+      & .number {
+        color: $white-color;
+        background-color: $secondary-color;
+      }
     }
   }
 }

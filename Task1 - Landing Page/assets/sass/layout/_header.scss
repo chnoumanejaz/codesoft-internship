@@ -5,6 +5,14 @@
     $background-light 30%,
     $white-color 30%
   );
+  @include respond(phone) {
+    padding: 3rem;
+    background-image: linear-gradient(
+      to right,
+      $background-light 55%,
+      $white-color 60%
+    );
+  }
   &__sides {
     display: flex;
     gap: 3rem;
@@ -31,6 +39,13 @@
         & button {
           right: 2rem;
           top: 2rem;
+          @include respond(phone) {
+            width: 70%;
+            right: 2rem;
+            left: 2rem;
+            top: 8rem;
+            margin: 0 auto;
+          }
         }
         & input {
           border: none;
@@ -39,6 +54,10 @@
           color: inherit;
           padding: 3.3rem 0 3.3rem 7rem;
           width: 60%;
+          @include respond(phone) {
+            width: 100%;
+            padding-bottom: 10rem;
+          }
         }
       }
       &-link {
@@ -57,28 +76,48 @@
     }
     &-right img {
       transform: scaleX(-1);
+      @include respond(tablet) {
+        display: none;
+      }
+      @include respond(phone) {
+        display: none;
+      }
     }
   }
 }
+
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8rem;
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: center;
+  }
   & .logo {
     width: 22rem;
     height: auto;
+    @include respond(phone) {
+      width: 17rem;
+    }
   }
   &__list {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
   }
   &__link {
     padding: 0.7rem 2.9rem;
     position: relative;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    @include respond(phone) {
+      padding: 0.5rem 1.3rem;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -87,13 +126,22 @@
       width: 0%;
       border-bottom: 2px solid $secondary-color;
       transition: all 0.4s ease;
+      @include respond(phone) {
+        left: 1rem;
+      }
     }
     &:hover::after {
       width: 63.5%;
+      @include respond(phone) {
+        width: 62%;
+      }
     }
   }
   &__item:first-child a::after {
     width: 63.5%;
+    @include respond(phone) {
+      width: 62%;
+    }
   }
   &__item:last-child a {
     color: $secondary-color;
