@@ -1,0 +1,30 @@
+.btn {
+  color: $white-color;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 1.4rem 3rem;
+  background-color: rgba($secondary-color, 0.9);
+  border: 1px ridge transparent;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(#000, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $white-color;
+    color: $secondary-color;
+    border: 1px ridge rgba($secondary-color, 0.7);
+    box-shadow: none;
+  }
+  &-secondary {
+    background-color: transparent;
+    color: $secondary-color;
+    border: 1.3px solid rgba($secondary-color, 0.8);
+    box-shadow: none;
+    &:hover {
+      background-color: $secondary-color;
+      color: $white-color;
+    }
+  }
+}

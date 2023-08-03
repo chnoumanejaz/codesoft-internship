@@ -1,0 +1,12 @@
+.svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: $secondary-color;
+  &-mail {
+    width: 4rem;
+    height: 4rem;
+  }
+  &-lock {
+    margin-left: 1.3rem;
+  }
+}

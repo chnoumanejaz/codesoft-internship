@@ -1,0 +1,88 @@
+/*
+----------------------------------
+    Setting initial styles
+----------------------------------
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.27;
+  color: $font-color;
+  overflow-x: hidden;
+  //   background-color: $white-color;
+}
+
+.container {
+  max-width: 140rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+:focus-visible {
+  outline: 2px solid $white-color;
+  border-radius: 5px;
+}
+
+::selection {
+  background-color: $secondary-color;
+  color: $white-color;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 2.8rem;
+}
+
+a,
+a:any-link {
+  text-decoration: none;
+  color: inherit;
+}
+img,
+span,
+input,
+button {
+  display: block;
+}
+
+.heading {
+  color: $primary-color;
+  font-weight: 800;
+  font-family: 'Roboto', sans-serif;
+  &-primary {
+    font-size: 4rem;
+  }
+  &-secondary {
+    font-size: 3.5rem;
+  }
+  &-third {
+    font-size: 2.2rem;
+  }
+}
+.paragraph {
+  font-size: 1.8rem;
+}
+.illustration {
+  animation: lightmovement 4s ease-in-out infinite;
+}

@@ -1,0 +1,98 @@
+.footer {
+  background-color: $background-light;
+  padding: 8rem 7rem 10rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  position: relative;
+  &__logoside {
+    & img {
+      width: 20rem;
+      height: auto;
+    }
+    & p {
+      margin: 2rem 0;
+    }
+    &-socialicons {
+      display: flex;
+      gap: 4rem;
+      & svg {
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: rgba(197, 197, 197, 0.527);
+        fill: $font-color;
+        transition: all 0.2s ease;
+        &:hover {
+          transform: scale(1.02);
+          cursor: pointer;
+        }
+      }
+      & .fb:hover {
+        fill: blue;
+        background-color: rgba(0, 0, 255, 0.3);
+      }
+      & .twitter:hover {
+        fill: rgb(10, 176, 241);
+        background-color: rgba(10, 175, 241, 0.3);
+      }
+      & .google:hover {
+        fill: red;
+        background-color: rgba(255, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 2rem;
+    &-item {
+      cursor: pointer;
+      transition: all 0.2s;
+      &:not(:last-child) {
+        margin-bottom: 1.3rem;
+      }
+      &:hover {
+        color: $primary-color;
+        transform: skewX(-10deg);
+        font-weight: 700;
+      }
+    }
+  }
+
+  & .copyright {
+    position: absolute;
+    bottom: 2rem;
+    & span {
+      display: inline-block;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0 0.3rem;
+      transition: all 0.2s;
+      &:hover {
+        color: $primary-color;
+        background-color: rgba($primary-color, 0.3);
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 6rem;
+  right: 4rem;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid $secondary-color;
+  filter: drop-shadow(0 5px 15px $primary-color);
+  transform: translateY(10rem);
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &--active {
+    transform: translateY(0);
+    animation: lightmovement 2s 0.5s ease infinite;
+  }
+}

@@ -1,0 +1,163 @@
+.card {
+  border: 1px solid rgba($font-color, 0.3);
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  // width: 100%;
+  background-color: $white-color;
+  & .svg-background {
+    width: 10rem;
+    height: 10rem;
+    background-color: $background-dark;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    margin-bottom: 2rem;
+    & svg {
+      width: 6rem;
+      height: 6rem;
+      fill: $primary-color;
+    }
+  }
+  & .type {
+    font-size: 4.5rem;
+    color: $secondary-color;
+    margin: 2.5rem 0;
+    display: grid;
+    place-items: center;
+    & span {
+      font-size: 1.4rem;
+      color: $font-color;
+    }
+  }
+  & .service {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    & .svg-background-small {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: #dcfce8;
+      display: grid;
+      place-items: center;
+      & svg {
+        width: 1.3rem;
+        height: 1.3rem;
+        fill: #07d4b2;
+      }
+    }
+    & p {
+      font-size: 1.5rem;
+    }
+  }
+  & .btn {
+    padding: 1rem 4rem;
+    margin-top: 5rem;
+  }
+
+  &:nth-child(2) {
+    border: none;
+    box-shadow: 0 10px 50px rgba($primary-color, 0.15);
+    animation: lightmovementCard 4s ease-in-out infinite;
+    & button {
+      margin-top: 3.4rem;
+    }
+  }
+
+  &-small {
+    padding: 2rem;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+    & .svg-background {
+      width: 4.5rem;
+      height: 4.5rem;
+      background-color: $background-dark;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      display: grid;
+      place-items: center;
+      & svg {
+        fill: $primary-color;
+      }
+    }
+    &:hover {
+      box-shadow: 0 1rem 3rem rgba($primary-color, 0.2);
+      border: 1px solid rgba($primary-color, 0.3);
+    }
+  }
+
+  &-small-center {
+    border: none;
+    box-shadow: 0 1rem 3rem rgba($primary-color, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    & .svg-background {
+      width: 6rem;
+      height: 6rem;
+      & svg {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    & h2 {
+      margin-bottom: 2rem;
+    }
+    &:nth-child(2) {
+      animation: none;
+      box-shadow: 0 1rem 3rem rgba($primary-color, 0.2);
+    }
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 1rem 3rem rgba($primary-color, 0.4);
+    }
+  }
+}
+
+.card-horizontal {
+  padding: 4rem;
+  display: flex;
+  gap: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  & .number {
+    font-weight: 800;
+    color: $secondary-color;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: 1px solid rgba($font-color, 0.3);
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease-out;
+  }
+  & .heading {
+    margin-bottom: 1rem;
+    & span {
+      display: inline-block;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 1.6rem;
+        left: 0;
+        border-bottom: 10px ridge rgba($secondary-color, 0.4);
+        width: 100%;
+      }
+    }
+  }
+  &:hover {
+    background-color: $white-color;
+    box-shadow: 0 10px 30px rgba($primary-color, 0.4);
+    transform: scale(1.05);
+    & .number {
+      color: $white-color;
+      background-color: $secondary-color;
+    }
+  }
+}

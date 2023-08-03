@@ -1,0 +1,111 @@
+.header {
+  padding: 2rem 7rem 4rem;
+  background-image: linear-gradient(
+    to right,
+    $background-light 30%,
+    $white-color 30%
+  );
+  &__sides {
+    display: flex;
+    gap: 3rem;
+    &-left {
+      & .paragraph {
+        margin: 2rem 0 5rem;
+      }
+      &-input {
+        display: flex;
+        align-items: center;
+        margin: 1.8rem 0;
+        position: relative;
+        box-shadow: 0 10px 30px rgba($primary-color, 0.2);
+        border-radius: 1rem;
+        overflow: hidden;
+        & svg,
+        & button {
+          position: absolute;
+          top: 2.3rem;
+        }
+        & svg {
+          left: 2rem;
+        }
+        & button {
+          right: 2rem;
+          top: 2rem;
+        }
+        & input {
+          border: none;
+          outline: none;
+          font-size: 1.8rem;
+          color: inherit;
+          padding: 3.3rem 0 3.3rem 7rem;
+          width: 60%;
+        }
+      }
+      &-link {
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline;
+      }
+      &-numbers {
+        display: flex;
+        gap: 7rem;
+        margin-top: 10rem;
+        & svg {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    &-right img {
+      transform: scaleX(-1);
+    }
+  }
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+  & .logo {
+    width: 22rem;
+    height: auto;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  &__link {
+    padding: 0.7rem 2.9rem;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.2rem;
+      left: 2rem;
+      width: 0%;
+      border-bottom: 2px solid $secondary-color;
+      transition: all 0.4s ease;
+    }
+    &:hover::after {
+      width: 63.5%;
+    }
+  }
+  &__item:first-child a::after {
+    width: 63.5%;
+  }
+  &__item:last-child a {
+    color: $secondary-color;
+    border: 2px solid $secondary-color;
+    border-radius: 1rem;
+    transition: all 0.4s ease;
+    &::after {
+      border: none;
+    }
+  }
+  &__item:last-child a:hover {
+    color: $white-color;
+    background-color: rgba($secondary-color, 0.9);
+  }
+}

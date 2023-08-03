@@ -1,0 +1,19 @@
+@keyframes lightmovement {
+  0%,
+  100% {
+    transform: scaleX(-1) translateY(0);
+  }
+  50% {
+    transform: scaleX(-1) translateY(3rem);
+  }
+}
+
+@keyframes lightmovementCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.5rem);
+  }
+}

@@ -1,0 +1,23 @@
+/*
+----------------------------------
+    Some repeated Styles or Helpers
+----------------------------------
+*/
+
+.no-wrap {
+  white-space: nowrap;
+}
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
