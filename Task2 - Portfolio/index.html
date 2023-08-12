@@ -21,9 +21,9 @@
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
 
     <!-- BOXICONS  -->
-    <link
+    <!-- <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet" />
+      rel="stylesheet" /> -->
 
     <!-- CSS  -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
@@ -142,7 +142,7 @@
               <i class="uil uil-whatsapp info-icon"></i>
               <div>
                 <h3 class="info__title">WhatsApp</h3>
-                <span class="info__subtitle">+92 3059639203</span>
+                <span class="info__subtitle">+92-305-9639203</span>
               </div>
             </div>
 
@@ -471,27 +471,591 @@
         <h2 data-heading="My Portfolio" class="section__title">Recent Works</h2>
 
         <div class="work__filters">
-          <span class="work__item active-work">All</span>
-          <span class="work__item">Website</span>
-          <span class="work__item">Design</span>
+          <span class="work__item active-work" data-filter="all">All</span>
+          <span class="work__item" data-filter=".web">Websites</span>
+          <span class="work__item" data-filter=".landing">Landing Pages</span>
+          <span class="work__item" data-filter=".mini">Mini Projects</span>
+          <span class="work__item" data-filter=".game">Games</span>
         </div>
 
         <div class="work__container container grid">
-          <div class="work__card">
-            <img src="./assets/img/work-1.webp" alt="" class="work__img" />
-            <h3 class="work__title"></h3>
+          <div class="work__card mix landing">
+            <img
+              src="./assets/img/projects/servigoView.png"
+              alt="servigo landing page image"
+              class="work__img" />
+            <h3 class="work__title">Landing Page</h3>
             <span class="work__button">
-              Demo
+              Details
               <i class="uil uil-arrow-right work__button-icon"></i>
             </span>
-            <div class="portfoli__item-details">
-              <h3 class="details__title"></h3>
-              <p class="details__description"></p>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">
+                Servigo - Elevate Your Service Offering
+              </h3>
+              <p class="details__description">
+                Servigo is a captivating landing page designed to showcase and
+                promote various services, providing an engaging platform for
+                services.
+              </p>
               <ul class="details__info">
-                <li>Created - <span>4 Dec 2020</span></li>
+                <li>Created - <span>04 Aug 2023</span></li>
+                <li>Technologies - <span>html scss javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://servigo-nouman.netlify.app/"
+                      >www.servigo.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/codesoft-internship/tree/main/Task1%20-%20Landing%20Page"
+                      >github/chnoumanejaz/servigo</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix web">
+            <img
+              src="./assets/img/projects/CinejunctionView.png"
+              alt="Cinejunction project image"
+              class="work__img" />
+            <h3 class="work__title">Web Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">Cinejunction - A movies website</h3>
+              <p class="details__description">
+                A movie and TV show platform enabling users to explore content
+                and book cinema tickets seamlessly.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>29 Jul 2023</span></li>
+                <li>Technologies - <span>html scss javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://cinejunction-nouman.netlify.app/"
+                      >www.cinejunction.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/cinejunction-app"
+                      >github/chnoumanejaz/cinejunction</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix web">
+            <img
+              src="./assets/img/projects/recipeView.png"
+              alt="RecipeApp project image"
+              class="work__img" />
+            <h3 class="work__title">Web Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">
+                RecipeApp - A recipe finder website
+              </h3>
+              <p class="details__description">
+                Discover and share recipes on Forkify — a dynamic website for
+                seamless exploration and contribution.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>13 Jun 2023</span></li>
                 <li>Technologies - <span>html css javaScript</span></li>
                 <li>Role - <span>frontend</span></li>
-                <li>View - <span><a href="#">www.web.com</a></span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://recipeapp-nouman.netlify.app/"
+                      >www.recipeapp.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Recipe-App"
+                      >github/chnoumanejaz/recipeapp</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix web">
+            <img
+              src="./assets/img/projects/weatherView.png"
+              alt="weather project image"
+              class="work__img" />
+            <h3 class="work__title">Web Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">
+                Weathernow - Global Weather Insights
+              </h3>
+              <p class="details__description">
+                Instantly access weather conditions across countries on
+                WeatherNow—a user-friendly website.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>18 Jun 2023</span></li>
+                <li>Technologies - <span>html css javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://weathernow-nouman.netlify.app/"
+                      >www.weathernow.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Main-javaScript-Projects-All/tree/main/Weather%20App"
+                      >github/chnoumanejaz/weatherapp</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix web">
+            <img
+              src="./assets/img/projects/coffeeshopView.png"
+              alt="coffeeshop project image"
+              class="work__img" />
+            <h3 class="work__title">Web Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">
+                CafeRoyale - Brews at Your Fingertips
+              </h3>
+              <p class="details__description">
+                CafeRoyale offers the convenience of online coffee ordering,
+                creating a seamless experience for users to enjoy their favorite
+                brews.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>21 Jun 2023</span></li>
+                <li>Technologies - <span>html css javaScript php</span></li>
+                <li>Role - <span>fullstack</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://noumanshop.000webhostapp.com/index.php"
+                      >www.caferoyale.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Coffee-Shop-using-js-php"
+                      >github/chnoumanejaz/caferoyale</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix web">
+            <img
+              src="./assets/img/projects/workoutView.png"
+              alt="workoutmap project image"
+              class="work__img" />
+            <h3 class="work__title">Web Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">
+                WorkoutMap - Chart Your Fitness Journey
+              </h3>
+              <p class="details__description">
+                WorkoutMap lets users track and visualize their workouts on an
+                interactive map, enhancing fitness experiences through
+                location-based exercise monitoring.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>06 Jun 2023</span></li>
+                <li>Technologies - <span>html css javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://workout-app-nouman.netlify.app/"
+                      >www.workoutmap.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Main-javaScript-Projects-All/tree/main/Workout%20on%20Map%20-%20Website"
+                      >github/chnoumanejaz/workoutmap</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="work__card mix mini">
+            <img
+              src="./assets/img/projects/todoView.png"
+              alt="todo website image"
+              class="work__img" />
+            <h3 class="work__title">Mini Web Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">Todo - Streamlined Task Management</h3>
+              <p class="details__description">
+                Todo is a versatile website featuring five distinct todo
+                sections, empowering users to efficiently organize tasks across
+                various categories.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>18 Jun 2023</span></li>
+                <li>Technologies - <span>html css javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a target="_blank" href="https://todo-nouman.netlify.app/"
+                      >www.todo.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Mini-projects-javascript/tree/main/To-Do%20List%20Modern"
+                      >github/chnoumanejaz/todo</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix landing">
+            <img
+              src="./assets/img/projects/bankView.png"
+              alt="bank landing page image"
+              class="work__img" />
+            <h3 class="work__title">Landing Page</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">Bank - Your Financial Partner</h3>
+              <p class="details__description">
+                The Bank project is a compelling landing page designed to
+                represent and introduce a bank's services, fostering a welcoming
+                online presence for customers.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>06 Jun 2023</span></li>
+                <li>Technologies - <span>html css javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://bank-website-nouman.netlify.app/"
+                      >www.bank.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Main-javaScript-Projects-All/tree/main/Website%20for%20Bank"
+                      >github/chnoumanejaz/bank</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix landing">
+            <img
+              src="./assets/img/projects/bookerView.png"
+              alt="booking site landing page image"
+              class="work__img" />
+            <h3 class="work__title">Landing Page</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">Booker - Easy Travel Reservations</h3>
+              <p class="details__description">
+                Booker is a comprehensive landing page that simplifies the
+                process of booking hotels, flights, cars, and tours, providing
+                users with a convenient one-stop platform for travel planning.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>21 May 2023</span></li>
+                <li>Technologies - <span>html scss</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://bookingwebsite-nouman.netlify.app/"
+                      >www.booker.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Booker-Web-Design"
+                      >github/chnoumanejaz/booker</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix landing">
+            <img
+              src="./assets/img/projects/natourView.png"
+              alt="natour site landing page image"
+              class="work__img" />
+            <h3 class="work__title">Landing Page</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">
+                Natour - Unforgettable Journey Awaits
+              </h3>
+              <p class="details__description">
+                Natour offers a captivating landing page designed exclusively
+                for booking exciting trips, streamlining the travel planning
+                process and ensuring memorable adventures.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>20 May 2023</span></li>
+                <li>Technologies - <span>html scss</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://natourwebsite-nouman.netlify.app/"
+                      >www.natour.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Natour-website-landing-page"
+                      >github/chnoumanejaz/natour</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix mini">
+            <img
+              src="./assets/img/projects/minibankView.png"
+              alt="mini bank website image"
+              class="work__img" />
+            <h3 class="work__title">Mini Web Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">MiniBank - Your Financial Hub</h3>
+              <p class="details__description">
+                MiniBank is a practical website that empowers users to
+                seamlessly send and receive money while also facilitating loan
+                requests, providing essential financial services at your
+                fingertips.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>03 Jun 2023</span></li>
+                <li>Technologies - <span>html css javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://minibank-nouman.netlify.app/"
+                      >www.minibank.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Mini-projects-javascript/tree/main/Modern%20Mini%20Bank%20App"
+                      >github/chnoumanejaz/minibank</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix game">
+            <img
+              src="./assets/img/projects/dicegameView.png"
+              alt="dice game website image"
+              class="work__img" />
+            <h3 class="work__title">Game Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">DiceGame - Roll, Compete, Win!</h3>
+              <p class="details__description">
+                DiceGme is an engaging two-player game that revolves around
+                rolling dice, adding an element of chance and strategy to create
+                an exciting gaming experience.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>03 Apr 2023</span></li>
+                <li>Technologies - <span>html css javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://dicegame-nouman.netlify.app/"
+                      >www.dicegame.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Games-Using-javaScript"
+                      >github/chnoumanejaz/dicegame</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="work__card mix game">
+            <img
+              src="./assets/img/projects/numbergameView.png"
+              alt="number game website image"
+              class="work__img" />
+            <h3 class="work__title">Game Design</h3>
+            <span class="work__button">
+              Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">NumberGame - Guess and Triumph!</h3>
+              <p class="details__description">
+                NumberGame is an immersive single-player experience that
+                challenges players to guess the correct number.
+              </p>
+              <ul class="details__info">
+                <li>Created - <span>15 Mar 2023</span></li>
+                <li>Technologies - <span>html css javaScript</span></li>
+                <li>Role - <span>frontend</span></li>
+                <li>
+                  Live View -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://numbergame-nouman.netlify.app/"
+                      >www.numbergame.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  Github -
+                  <span
+                    ><a
+                      target="_blank"
+                      href="https://github.com/chnoumanejaz/Games-Using-javaScript"
+                      >github/chnoumanejaz/numbergame</a
+                    ></span
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -499,14 +1063,353 @@
       </section>
 
       <!-- Portfolio Popup -->
+      <div class="portfolio__popup">
+        <div class="portfolio__popup-inner">
+          <div class="portfolio__popup-content grid">
+            <span class="portfolio__popup-close">
+              <i class="uil uil-times"></i>
+            </span>
+            <div class="pp__thumbnail">
+              <img class="portfolio__popup-img" />
+            </div>
+            <div class="portfolio__popup-info">
+              <div class="portfolio__popup-subtitle">
+                Featured - <span></span>
+              </div>
+              <div class="portfolio__popup-body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Services  -->
+      <section class="services section" id="services">
+        <h2 data-heading="Services" class="section__title">What I Offer</h2>
 
-      <!-- Testimonials  -->
+        <div class="services__container container grid">
+          <div class="services__content">
+            <div>
+              <i class="uil uil-web-grid services__icon"> </i>
+              <h3 class="services__title">
+                Web <br />
+                Design
+              </h3>
+            </div>
+
+            <span class="services__button">
+              View More
+              <i class="uil uil-arrow-right services__button-icon"> </i>
+            </span>
+
+            <div class="services__model">
+              <div class="services__model-content">
+                <i class="uil uil-times services__model-close"></i>
+                <h3 class="services__model-title">Web Designing</h3>
+                <p class="services__model-description">
+                  With more than 1 year of expertise, I provide careful web
+                  design solutions that combine how things look with how they
+                  work, making online experiences that people find interesting
+                  and useful.
+                </p>
+                <ul class="services__model-services grid">
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">Landing Page Design</p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      Blog Design and Integration
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">User-Friendly Layouts</p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      Website Redesign and Revamp
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">Social Media Integration</p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">Many more</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="services__content">
+            <div>
+              <i class="uil uil-edit services__icon"> </i>
+              <h3 class="services__title">
+                Brand <br />
+                Design
+              </h3>
+            </div>
+
+            <span class="services__button">
+              View More
+              <i class="uil uil-arrow-right services__button-icon"> </i>
+            </span>
+
+            <div class="services__model">
+              <div class="services__model-content">
+                <i class="uil uil-times services__model-close"></i>
+                <h3 class="services__model-title">Brand Designing</h3>
+                <p class="services__model-description">
+                  Using 6 months of experience, I specialize in making brand
+                  identities that show what a company stands for. My designs
+                  show special qualities and make a strong impression on the
+                  people the company wants to reach.
+                </p>
+                <ul class="services__model-services grid">
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">Logo Design</p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      Brand Identity Development
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      Packaging Design for Products
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      Business Card and Stationery Design
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      Social Media Profile and Cover Image Design
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">Many more</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="services__content">
+            <div>
+              <i class="uil uil-arrow services__icon"> </i>
+              <h3 class="services__title">
+                UI/UX <br />
+                Design
+              </h3>
+            </div>
+
+            <span class="services__button">
+              View More
+              <i class="uil uil-arrow-right services__button-icon"> </i>
+            </span>
+
+            <div class="services__model">
+              <div class="services__model-content">
+                <i class="uil uil-times services__model-close"></i>
+                <h3 class="services__model-title">UI/UX Designing</h3>
+                <p class="services__model-description">
+                  Using 5 months of experience, I am really good at making
+                  designs for how things look and how people use them. I focus
+                  on making things easy for people to use and making them look
+                  really good.
+                </p>
+                <ul class="services__model-services grid">
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      (UI) Design for Websites and Apps
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      (UX) Research and Analysis
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      Wireframing and Prototyping
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">
+                      Interaction Design for Seamless User Navigation
+                    </p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">Usability Testing</p>
+                  </li>
+                  <li class="services__model-service">
+                    <i class="uil uil-check-circle services__model-icon"></i>
+                    <p class="services__model-info">Many more</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Contact  -->
+      <section class="contact section" id="contact">
+        <h2 data-heading="Get in touch" class="section__title">Contact Me</h2>
+
+        <div class="contact__container container grid">
+          <div class="contact__content">
+            <div class="contact__info">
+              <div class="contact__card">
+                <i class="uil uil-envelope-edit contact__card-icon"></i>
+                <h3 class="contact__card-title">Email</h3>
+                <span class="contact__card-data">noumanejaz92@gmail.com</span>
+                <span class="contact__button">
+                  Write me
+                  <i class="uil uil-arrow-right contact__button-icon"> </i>
+                </span>
+              </div>
+
+              <div class="contact__card">
+                <i class="uil uil-whatsapp contact__card-icon"></i>
+                <h3 class="contact__card-title">WhatsApp</h3>
+                <span class="contact__card-data">+92-305-9639203</span>
+                <span class="contact__button">
+                  Write me
+                  <i class="uil uil-arrow-right contact__button-icon"> </i>
+                </span>
+              </div>
+
+              <div class="contact__card">
+                <i class="uil uil-linkedin-alt contact__card-icon"></i>
+                <h3 class="contact__card-title">Linkedin</h3>
+                <span class="contact__card-data">chnoumanejaz</span>
+                <span class="contact__button">
+                  Write me
+                  <i class="uil uil-arrow-right contact__button-icon"> </i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__content">
+            <form action="" class="contact__form">
+              <div class="input__container">
+                <input type="text" class="input" required />
+                <label for="username">Enter Name*</label>
+                <span>Enter Name*</span>
+              </div>
+
+              <div class="input__container">
+                <input type="email" class="input" required />
+                <label for="email">Enter Email*</label>
+                <span>Enter Email*</span>
+              </div>
+
+              <div class="input__container">
+                <input type="tel" class="input" />
+                <label for="phone">Enter Phone No</label>
+                <span>Enter Phone No</span>
+              </div>
+
+              <div class="input__container textarea">
+                <textarea
+                  name="message"
+                  id="message"
+                  class="input"
+                  required></textarea>
+                <label for="username">Enter Message*</label>
+                <span>Enter Message*</span>
+              </div>
+
+              <button type="submit" class="button">
+                <i class="uil uil-navigator button__icon"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
 
       <!-- FOOTER  -->
+
+      <footer class="footer">
+        <div class="footer__bg">
+          <div class="footer__container container grid">
+            <div>
+              <h1 class="footer__title">M Nouman Ejaz</h1>
+              <span class="footer__subtitle"> Frontend Developer </span>
+            </div>
+            <ul class="footer__links">
+              <li>
+                <a href="#services" class="footer__link">Services</a>
+              </li>
+              <li>
+                <a href="#work" class="footer__link">Projects</a>
+              </li>
+              <li>
+                <a href="#about" class="footer__link"> About </a>
+              </li>
+              <li>
+                <a
+                  href="https://linktr.ee/chnoumanejaz"
+                  target="_blank"
+                  class="footer__link">
+                  Certifications
+                </a>
+              </li>
+            </ul>
+            <div class="footer__socials">
+              <a
+                href="https://www.linkedin.com/in/chnoumanejaz/"
+                target="_blank"
+                class="footer__social">
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+              <a
+                href="https://github.com/chnoumanejaz"
+                target="_blank"
+                class="footer__social">
+                <i class="uil uil-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/chnoumanejaz/"
+                target="_blank"
+                class="footer__social">
+                <i class="uil uil-instagram"></i>
+              </a>
+              <a
+                href="https://web.facebook.com/chnoumanejaz31/"
+                target="_blank"
+                class="footer__social">
+                <i class="uil uil-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          <p class="footer__copyright">
+            2023 &copy; M Nouman Ejaz. All rights reserverd
+          </p>
+        </div>
+      </footer>
     </main>
 
     <!-- SCROLL UP  -->
