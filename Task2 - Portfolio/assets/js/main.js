@@ -1,10 +1,25 @@
 //  SHOW SIDEBAR
+const navMenu = document.getElementById('sidebar'),
+  navToggle = document.getElementById('nav-toggle'),
+  navClose = document.getElementById('nav-close');
 
 //  ------ SIDEBAR SHOW
 /* Validate If Constant Exists */
+navToggle?.addEventListener('click', () => {
+  navMenu.classList.add('show-sidebar');
+});
 
 //  ------ SIDEBAR HIDDEN
 /* Validate If Constant Exists */
+navClose?.addEventListener('click', () => {
+  navMenu.classList.remove('show-sidebar');
+});
+
+navMenu?.addEventListener('click', function (e) {
+  if (e.target.closest('.nav__link')) {
+    navMenu.classList.remove('show-sidebar');
+  }
+});
 
 // ----------- SKILLS TABS ------------
 const tabs = document.querySelectorAll('[data-target]'),
@@ -122,5 +137,87 @@ inputs.forEach(input => {
 });
 
 //  SCROLL SECTIONS ACTIVE LINK
+const sections = document.querySelectorAll('section[id]');
 
-//  SHOW SCROLL UP
+// event listener on a scroll
+window.addEventListener('scroll', navHighlightor);
+
+function navHighlightor() {
+  let scrollY = window.scrollY;
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute('id');
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector('.nav__menu a[href*=' + sectionId + ']')
+        .classList.add('active-link');
+    } else {
+      document
+        .querySelector('.nav__menu a[href*=' + sectionId + ']')
+        .classList.remove('active-link');
+    }
+  });
+
+  //  SHOW SCROLL UP
+  const scrollUp = document.querySelector('.scroll-up');
+  if (scrollY > 600) {
+    scrollUp.classList.add('active')
+  } else {
+    scrollUp.classList.remove('active')
+  }
+}
+
+// Contact form email sending
+document.getElementById('submitButton').addEventListener('click', function (e) {
+  e.preventDefault();
+  const name = document.getElementById('username').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value.trim();
+
+  if (name === '' || email === '' || message === '') {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Please fill all required fields!',
+    });
+    return;
+  }
+
+  Swal.fire('Email Ready to sent', 'We are redirecting you 👀', 'success');
+  setTimeout(() => {
+    const mailtoLink =
+      'mailto:noumanejaz92@gmail.com' +
+      '?subject=New Contact Form Submission (Portfolio)' +
+      '&body=Name: ' +
+      name +
+      '&body=Phone: ' +
+      phone +
+      '%0D%0AEmail: ' +
+      email +
+      '&body=Message: ' +
+      message;
+    window.open(mailtoLink, '_blank');
+  }, 2500);
+});
+
+// Handling whatsapp and other links
+const whatsappBtn = document.querySelector('.whatsapp-btn');
+whatsappBtn.addEventListener('click', function () {
+  window.open(
+    'https://wa.me/+923059639203?text=Hello%2C%20I%20just%20saw%20your%20portfolio%20website.',
+    '_blank'
+  );
+});
+
+const emailBtn = document.querySelector('.email-btn');
+emailBtn.addEventListener('click', function () {
+  window.open('mailto:noumanejaz92@gmail.com', '_blank');
+});
+
+const linkedinBtn = document.querySelector('.linkedin-btn');
+linkedinBtn.addEventListener('click', function () {
+  window.open('https://www.linkedin.com/in/chnoumanejaz/', '_blank');
+});

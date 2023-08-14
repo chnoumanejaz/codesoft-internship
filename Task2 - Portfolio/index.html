@@ -20,11 +20,6 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
 
-    <!-- BOXICONS  -->
-    <!-- <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet" /> -->
-
     <!-- CSS  -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -33,14 +28,23 @@
     <script defer src="assets/js/mixitup.min.js"></script>
     <script defer src="assets/js/swiper-bundle.min.js"></script>
     <script defer src="assets/js/main.js"></script>
+
+    <!-- js alert messages -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
   <body>
     <!-- SIDEBAR  -->
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="uil uil-bars"></i>
+    </div>
+
     <aside class="sidebar" id="sidebar">
       <nav class="nav">
         <div class="nav__logo">
-          <a href="index.html" class="nav__logo-text">N</a>
+          <a href="index.html" class="nav__logo-text">
+            <img src="./assets/img/favicon.png" alt="N" />
+          </a>
         </div>
 
         <div class="nav__menu">
@@ -67,9 +71,8 @@
             </ul>
           </div>
         </div>
-
-        <div class="btn__share">
-          <i class="uil uil-share-alt social__share"></i>
+        <div class="nav__close" id="nav-close">
+          <i class="uil uil-times"></i>
         </div>
       </nav>
     </aside>
@@ -115,17 +118,22 @@
             class="home__img" />
           <div class="home__data">
             <h1 class="home__title">Hi, I'am M Nouman Ejaz</h1>
-            <h3 class="home__subtitle">Frontend Developer</h3>
+            <h3 class="home__subtitle no-wrap">Frontend Developer</h3>
             <p class="home__description">
               Aspiring Frontend Developer with a strong foundation in HTML, CSS,
               and JavaScript gained through hands-on internship experience.
               Committed to translating design ideas into user-friendly web
-              interfaces. Eager to learn and adapt to new frontend technologies
-              while contributing to creating engaging online experiences.
+              interfaces. <br />
+              Eager to learn and adapt to new frontend technologies while
+              contributing to creating engaging online experiences.
             </p>
-            <a href="#about" class="button">
+            <a href="#about" class="button more-btn">
               <i class="uil uil-user button__icon"></i>
               More About Me
+            </a>
+            <a href="./assets/files/M Nouman Ejaz.pdf" class="button cv-btn">
+              <i class="uil uil-download-alt button__icon cv-icon"></i>
+              Download Cv
             </a>
           </div>
           <div class="my__info">
@@ -473,8 +481,8 @@
         <div class="work__filters">
           <span class="work__item active-work" data-filter="all">All</span>
           <span class="work__item" data-filter=".web">Websites</span>
-          <span class="work__item" data-filter=".landing">Landing Pages</span>
-          <span class="work__item" data-filter=".mini">Mini Projects</span>
+          <span class="work__item" data-filter=".landing">Landing</span>
+          <span class="work__item" data-filter=".mini">Mini</span>
           <span class="work__item" data-filter=".game">Games</span>
         </div>
 
@@ -985,7 +993,7 @@
             <div class="portfolio__item-details">
               <h3 class="details__title">DiceGame - Roll, Compete, Win!</h3>
               <p class="details__description">
-                DiceGme is an engaging two-player game that revolves around
+                DiceGame is an engaging two-player game that revolves around
                 rolling dice, adding an element of chance and strategy to create
                 an exciting gaming experience.
               </p>
@@ -1096,7 +1104,7 @@
               </h3>
             </div>
 
-            <span class="services__button">
+            <span class="services__button no-wrap">
               View More
               <i class="uil uil-arrow-right services__button-icon"> </i>
             </span>
@@ -1154,7 +1162,7 @@
               </h3>
             </div>
 
-            <span class="services__button">
+            <span class="services__button no-wrap">
               View More
               <i class="uil uil-arrow-right services__button-icon"> </i>
             </span>
@@ -1216,7 +1224,7 @@
               </h3>
             </div>
 
-            <span class="services__button">
+            <span class="services__button no-wrap">
               View More
               <i class="uil uil-arrow-right services__button-icon"> </i>
             </span>
@@ -1282,7 +1290,7 @@
                 <i class="uil uil-envelope-edit contact__card-icon"></i>
                 <h3 class="contact__card-title">Email</h3>
                 <span class="contact__card-data">noumanejaz92@gmail.com</span>
-                <span class="contact__button">
+                <span class="contact__button email-btn">
                   Write me
                   <i class="uil uil-arrow-right contact__button-icon"> </i>
                 </span>
@@ -1292,7 +1300,7 @@
                 <i class="uil uil-whatsapp contact__card-icon"></i>
                 <h3 class="contact__card-title">WhatsApp</h3>
                 <span class="contact__card-data">+92-305-9639203</span>
-                <span class="contact__button">
+                <span class="contact__button whatsapp-btn">
                   Write me
                   <i class="uil uil-arrow-right contact__button-icon"> </i>
                 </span>
@@ -1302,8 +1310,8 @@
                 <i class="uil uil-linkedin-alt contact__card-icon"></i>
                 <h3 class="contact__card-title">Linkedin</h3>
                 <span class="contact__card-data">chnoumanejaz</span>
-                <span class="contact__button">
-                  Write me
+                <span class="contact__button linkedin-btn">
+                  View Profile
                   <i class="uil uil-arrow-right contact__button-icon"> </i>
                 </span>
               </div>
@@ -1313,19 +1321,19 @@
           <div class="contact__content">
             <form action="" class="contact__form">
               <div class="input__container">
-                <input type="text" class="input" required />
+                <input type="text" class="input" id="username" required />
                 <label for="username">Enter Name*</label>
                 <span>Enter Name*</span>
               </div>
 
               <div class="input__container">
-                <input type="email" class="input" required />
+                <input type="email" class="input" id="email" required />
                 <label for="email">Enter Email*</label>
                 <span>Enter Email*</span>
               </div>
 
               <div class="input__container">
-                <input type="tel" class="input" />
+                <input type="tel" class="input" id="phone" />
                 <label for="phone">Enter Phone No</label>
                 <span>Enter Phone No</span>
               </div>
@@ -1336,11 +1344,11 @@
                   id="message"
                   class="input"
                   required></textarea>
-                <label for="username">Enter Message*</label>
+                <label for="message">Enter Message*</label>
                 <span>Enter Message*</span>
               </div>
 
-              <button type="submit" class="button">
+              <button type="submit" class="button" id="submitButton">
                 <i class="uil uil-navigator button__icon"></i>
                 Send Message
               </button>
@@ -1350,13 +1358,16 @@
       </section>
 
       <!-- FOOTER  -->
-
       <footer class="footer">
         <div class="footer__bg">
           <div class="footer__container container grid">
             <div>
               <h1 class="footer__title">M Nouman Ejaz</h1>
               <span class="footer__subtitle"> Frontend Developer </span>
+              <a href="./assets/files/M Nouman Ejaz.pdf" class="button cv-btn-footer no-wrap">
+                <i class="uil uil-download-alt button__icon cv-icon"></i>
+                Download Cv
+              </a>
             </div>
             <ul class="footer__links">
               <li>
@@ -1377,7 +1388,7 @@
                 </a>
               </li>
             </ul>
-            <div class="footer__socials">
+            <div class="footer__socials no-wrap">
               <a
                 href="https://www.linkedin.com/in/chnoumanejaz/"
                 target="_blank"
@@ -1413,5 +1424,8 @@
     </main>
 
     <!-- SCROLL UP  -->
+    <div class="scroll-up">
+      <a href="#"><i class="uil uil-angle-double-up"></i></a>
+    </div>
   </body>
 </html>
